@@ -13,7 +13,7 @@ export default function Die(props) {
         <div className="die-pic">
           <img
             src={`${process.env.PUBLIC_URL}${props.value.url}`}
-            alt="image"
+            alt="flag"
           />
           <h2 className="die-name">{props.value.name}</h2>
         </div>
