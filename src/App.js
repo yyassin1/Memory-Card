@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   const [countScore, setCountScore] = React.useState(0);
   const [highScore, setHighScore] = React.useState(0);
-  const [held, setHeld] = React.useState(false);
+  const [setHeld] = React.useState(false);
   const [gameOver, setGameOver] = React.useState(false);
   const [boxes, setBoxes] = React.useState([
     { id: 1, name: "Afar", url: "Afar.svg.png", clicked: false },
