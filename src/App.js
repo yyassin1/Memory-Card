@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 function App() {
   const [countScore, setCountScore] = React.useState(0);
   const [highScore, setHighScore] = React.useState(0);
-  const [setHeld] = React.useState(false);
   const [gameOver, setGameOver] = React.useState(false);
   const [boxes, setBoxes] = React.useState([
     { id: 1, name: "Afar", url: "Afar.svg.png", clicked: false },
@@ -53,9 +52,7 @@ function App() {
     }
 
     if (heldBoxId) {
-      const heldBoxIndex = shuffledBoxes.findIndex(
-        (box) => box.id === heldBoxId
-      );
+      const heldBoxIndex = shuffledBoxes.findIndex((box) => box.id === heldBoxId);
       shuffledBoxes[heldBoxIndex].held = true;
     }
 
@@ -65,6 +62,7 @@ function App() {
   function handleGameOver() {
     setGameOver(true);
   }
+
   function handleClick(boxId) {
     const clickedBox = boxes.find((box) => box.id === boxId);
     if (clickedBox.held) {
@@ -77,7 +75,7 @@ function App() {
         box.id === boxId ? { ...box, clicked: true, held: false } : box
       );
       setBoxes(updatedBoxes);
-      setHeld(false);
+      shuffleBoxes(boxId);
     } else {
       const updatedBoxes = boxes.map((box) =>
         box.id === boxId ? { ...box, held: true } : box
@@ -85,7 +83,6 @@ function App() {
 
       setCountScore(countScore + 1);
       setBoxes(updatedBoxes);
-      setHeld(true);
       shuffleBoxes(boxId);
     }
   }
