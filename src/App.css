@@ -65,6 +65,8 @@ img {
   .die-face {
     height: auto;
     width: auto;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
   }
 }
 h1 {
