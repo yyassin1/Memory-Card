@@ -56,6 +56,17 @@ img {
   height: 130px;
   width: 180px;
 }
+
+@media (max-width: 768px) {
+  img { 
+    height: 70px;
+    width: 90px;
+  }
+  .die-face {
+    height: auto;
+    width: auto;
+  }
+}
 h1 {
   font-size: 30px;
 }
