@@ -36,7 +36,7 @@
 
 .dice-container {
   display: grid;
-  grid-template: auto auto / repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 
@@ -63,10 +63,13 @@ img {
     width: 90px;
   }
   .die-face {
-    height: auto;
-    width: auto;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+  }
+  .dice-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
 h1 {

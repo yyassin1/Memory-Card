@@ -8,7 +8,7 @@ export default function Die(props) {
   }
   
   return (
-    <>
+    <div className="dice-container">
       <div className="die-face" style={props.style} onClick={props.onClick}>
         <div className="die-pic">
           <img
@@ -25,6 +25,6 @@ export default function Die(props) {
         <h1 className="gameO">Game Over!</h1>
         <button onClick={handleRetry}>Retry</button>
       </div>
-    </>
+    </div>
   );
 }
